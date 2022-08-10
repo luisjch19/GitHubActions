@@ -1,5 +1,6 @@
 using System;
 using Xunit;
+using Validators.Password;
 
 namespace MyProject.Tests
 {
