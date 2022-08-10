@@ -6,6 +6,25 @@ namespace MyProject.Tests
 {
     public class UnitTest1
     {
+        public static double Add(double number1, double number2)  
+        {             
+            return (number1 + number2);  
+        }  
+  
+        public static double Subtract(double number1, double number2)  
+        {  
+            return (number1 - number2);  
+        }  
+  
+        public static double Multiply(double number1, double number2)  
+        {  
+            return (number1 * number2);  
+        }  
+  
+        public static double Divide(double number1, double number2)  
+        {  
+            return (number1 / number2);  
+        }  
         [Fact]
         public void MyTest()
         {
@@ -21,7 +40,7 @@ namespace MyProject.Tests
             var expectedValue = 6;  
   
             // Act  
-            var sum = MathOperation.Add(num1, num2);  
+            var sum = Add(num1, num2);  
   
             //Assert  
             Assert.Equal(expectedValue, sum, 1);  
@@ -36,7 +55,7 @@ namespace MyProject.Tests
             var expectedValue = -0.2;  
   
             // Act  
-            var sub = MathOperation.Subtract(num1, num2);  
+            var sub = Subtract(num1, num2);  
   
             //Assert  
             Assert.Equal(expectedValue, sub, 1);  
@@ -51,7 +70,7 @@ namespace MyProject.Tests
             var expectedValue = 8.99;  
   
             // Act  
-            var mult = MathOperation.Multiply(num1, num2);  
+            var mult = Multiply(num1, num2);  
   
             //Assert  
             Assert.Equal(expectedValue, mult, 2);  
@@ -66,7 +85,7 @@ namespace MyProject.Tests
             var expectedValue = 0.94; //Rounded value  
   
             // Act  
-            var div = MathOperation.Divide(num1, num2);  
+            var div = Divide(num1, num2);  
   
             //Assert  
             Assert.Equal(expectedValue, div, 2);  
